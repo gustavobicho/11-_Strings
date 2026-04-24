@@ -194,6 +194,21 @@ void setup()
   // Converte String para char*
 
   Serial.println("Oi");
+
+  //formatação na exibição
+ char buffer[100]; //define o tamanho do vetor que vai guardar o caracter
+ int anoAtual = 2026;
+
+Serial.printf("Prof: %s Ano Atual: %d\n", nomeCompleto.c_str(), anoAtual);
+
+snprintf(
+  buffer,
+   sizeof(buffer),
+    "O Prof %s é muito legal\n\rAno Atual: %d\n\r100%%",
+     nomeCompleto.c_str(),
+    anoAtual);
+
+Serial.println(buffer);
 }
 
 void loop()
